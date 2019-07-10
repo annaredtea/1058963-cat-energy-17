@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анна Ильченко](https://up.htmlacademy.ru/adaptive/17/user/1058963).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Зубов](https://up.htmlacademy.ru/adaptive/17/user/208340).
 
 ---
 
