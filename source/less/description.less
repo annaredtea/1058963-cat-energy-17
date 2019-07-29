@@ -1,12 +1,26 @@
-.description-item {
+.description {
   font-family: "Arial", sans-serif;
   font-size: 12px;
   margin-bottom: 23px;
   margin-left: 20px;
   min-width: 150px;
+  color: #444444;
 }
 
-.description-item__value {
+
+.description__value {
   text-align: center;
   padding-left: 64px;
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .description {
+    margin-left: 0;
+  }
 }

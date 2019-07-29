@@ -1,5 +1,6 @@
 .button {
   font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
   margin-left: 20px;
   margin-top: 180px;
   padding-top: 14px;
@@ -21,4 +22,41 @@
   background-color: #f2f2f2;
   text-decoration: none;
   color: #444444;
+}
+
+@media (min-width: 768px) {
+  .button {
+    margin: 0;
+    margin-left: 100px;
+    width: 245px;
+    font-size: 20px;
+    margin-top: 48px;
+  }
+
+  .button--purchase {
+    margin: 0;
+    padding: 5px 93px 5px 95px;
+    font-size: 16px;
+    margin-left: 35px;
+  }
+
+  .button--grey {
+    margin: 0;
+    font-size: 16px;
+    margin-left: 20px;
+    padding: 10px 79px 10px 81px;
+    min-width: 300px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .button--purchase {
+    padding: 13px 53px 12px 55px;
+    margin-left: 40px;
+  }
+
+  .button--grey {
+    min-width: 169px;
+    padding: 13px 39px 12px 41px;
+  }
 }

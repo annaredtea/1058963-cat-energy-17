@@ -1,7 +1,9 @@
 .page-footer__links {
   background-color: #f2f2f2;
+  padding: 0;
   padding-top: 39px;
   padding-bottom: 22px;
+  min-width: 320px;
 }
 
 .page-footer__logo-link {
@@ -19,4 +21,37 @@
   font-size: 16px;
   text-decoration: none;
   color: #444444;
+}
+
+@media (min-width: 768px) {
+  .page-footer__links {
+    display: flex;
+    padding: 0;
+  }
+
+  .page-footer__logo-link {
+    margin: 0;
+    padding-left: 31px;
+  }
+
+  .page-footer__logo-image {
+    padding-top: 64px;
+    padding-bottom: 62px;
+  }
+
+  .page-footer__partner-logo {
+    padding-top: 50px;
+    left: 150px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .page-footer__logo-link {
+    padding-left: 110px;
+  }
+
+  .page-footer__partner-container {
+    margin-left: auto;
+    padding-right: 140px;
+  }
 }
