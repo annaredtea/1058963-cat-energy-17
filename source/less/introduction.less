@@ -1,17 +1,16 @@
 .introduction__wrapper {
-  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-image: linear-gradient(to top, #ffffff 175px, transparent 175px), url("/img/index-background-mobile@1x.jpg");
+  background-color: #5eaa2f;
   background-repeat: no-repeat;
+  background-position: center top;
   color: #ffffff;
   line-height: 1;
-  min-width: 320px;
-  padding: 0;
+  text-align: center;
 }
 
 .introduction__title {
   margin: 0;
   padding-top: 29px;
-  padding-left: 38px;
-  width: 250px;
   font-weight: 400;
   text-align: center;
   font-size: 36px;
@@ -23,12 +22,16 @@
   padding-top: 19px;
   font-size: 14px;
   text-transform: uppercase;
-  padding-left: 60px;
+  padding-bottom: 50px;
 }
 
 @media (min-width: 768px) {
   .introduction__wrapper {
-    background-image: none;
+    background: 0 0;
+  }
+
+  .introduction__image {
+    position: relative;
   }
 
   .introduction__title {
@@ -52,5 +55,17 @@
 @media (min-width: 1300px) {
   .introduction__wrapper {
     margin-top: 90px;
+    padding-bottom: 220px;
+  }
+
+  .introduction__title {
+    padding: 0;
+    padding-left: 81px;
+  }
+
+  .introduction__image {
+    position: absolute;
+    top: -90px;
+    margin-left: -160px;
   }
 }

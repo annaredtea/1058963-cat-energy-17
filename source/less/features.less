@@ -8,23 +8,21 @@
 }
 
 .features__item {
-  display: block;
-  position: relative;
-  padding-left: 60px;
+  display: flex;
+  align-items: center;
   font-family: "Arial", sans-serif;
   margin-bottom: 32px;
-  width: 195px;
   font-size: 14px;
   list-style: none;
 
   &::before {
     content: "";
-    position: absolute;
+    display: block;
     background-color: #68b738;
     background-repeat: no-repeat;
     height: 60px;
-    width: 60px;
-    left: -20px;
+    min-width: 60px;
+    margin-right: 20px;
   }
 
   &--healthy::before {
@@ -56,11 +54,11 @@
   font-family: "Arial", sans-serif;
   color: #444444;
   font-size: 14px;
-  padding-top: 5px;
+  margin: 0;
 }
 
 .features__list {
-  padding-inline-start: 20px;
+  padding-inline-start: 0;
 }
 
 @media (min-width: 768px) {
@@ -79,9 +77,15 @@
   }
 
   .features__item {
+    margin: 0;
     padding: 0;
-    margin-bottom: 137px;
-    margin-right: 183px;
+    display: block;
+    flex: 0 0 50%;
+    max-width: 50%;
+    align-items: center;
+    margin-bottom: 87px;
+    counter-increment: number;
+    max-height: 235px;
   }
 
   .features__item:nth-child(2n) {
@@ -94,8 +98,7 @@
     margin: 0;
     font-size: 16px;
     text-align: left;
-    width: 250px;
-    padding-top: 37px;
+    max-width: 250px;
   }
 
   .features__item::before {
@@ -103,6 +106,22 @@
     display: block;
     width: 80px;
     height: 80px;
+    margin-bottom: 37px;
+  }
+
+  .features__item::after {
+    font-family: "Oswald", "Arial", sans-serif;
+    position: relative;
+    display: block;
+    content: counter(number);
+    min-width: 136px;
+    font-size: 281px;
+    line-height: 235px;
+    color: #f2f2f2;
+    z-index: -1;
+    text-align: center;
+    top: -205px;
+    right: -15px;
   }
 }
 
@@ -114,7 +133,8 @@
 
   .features__item {
     margin: 0;
-    margin-right: 120px;
+    max-width: 250px;
+    margin-right: 100px;
   }
 
   .features__item:nth-child(2n) {
@@ -123,5 +143,10 @@
 
   .features__item:nth-child(4n) {
     margin-right: 0;
+  }
+
+  .features__item::after {
+    right: -50px;
+    top: -210px;
   }
 }
