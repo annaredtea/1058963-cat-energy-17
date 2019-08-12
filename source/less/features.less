@@ -1,5 +1,4 @@
 .features__title {
-  padding-left: 22px;
   font-size: 36px;
   line-height: 60px;
   text-align: left;
@@ -126,15 +125,20 @@
 }
 
 @media (min-width: 1300px) {
+  .features {
+    padding: 0;
+  }
+
   .features__list {
     flex-wrap: nowrap;
-    padding-bottom: 138px;
+    margin: 0;
+    padding-bottom: 90px;
   }
 
   .features__item {
     margin: 0;
     max-width: 250px;
-    margin-right: 100px;
+    margin-right: 70px;
   }
 
   .features__item:nth-child(2n) {

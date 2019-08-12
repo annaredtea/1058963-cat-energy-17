@@ -7,31 +7,29 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header__preview">
       <div class="main-navigation main-navigation__wrapper container">
-        <div class="main-navigation__preview">
-          <nav class="main-navigation__block">
-            <a class="main-navigation__logo" href="#">
-              <picture>
-                <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img class="main-navigation__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Cat Energy">
-              </picture>
-            </a>
-            <button class="main-navigation__toggle" type="button">Открыть меню</button>
-            <ul class="main-navigation__list">
-              <li class="main-navigation__item main-navigation__item--active">
-                <a class="main-navigation__link" href="#">Главная</a>
-              </li>
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="main-navigation__item">
-                <a class="main-navigation__link" href="form.html">Подбор программы</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="main-navigation__block">
+          <a class="main-navigation__logo" href="#">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="main-navigation__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Cat Energy">
+            </picture>
+          </a>
+          <button class="main-navigation__toggle" type="button">Открыть меню</button>
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item main-navigation__item--active">
+              <a class="main-navigation__link main-navigation__link--white" href="#">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link main-navigation__link--white" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link main-navigation__link--white" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
       <section class="introduction">
         <div class="introduction__wrapper container">
@@ -49,9 +47,9 @@
       </section>
     </header>
     <main class="page-main">
-      <section class="programs">
+      <section class="programs container">
         <h2 class="visually-hidden">Программы питания</h2>
-        <div class="programs__wrapper container">
+        <div class="programs__wrapper">
           <div class="programs__block">
             <div class="programs__item programs__item--slim">
               <div class="programs__description">
@@ -76,7 +74,7 @@
       </section>
       <section class="features">
         <div class="features__wrapper container">
-          <h2 class="features__title title">Как это работает</h2>
+          <h2 class="features__title">Как это работает</h2>
           <ul class="features__list">
             <li class="features__item features__item--healthy">
               <p class="features__item-description">Функциональное питание содержит только полезные питательные вещества.</p>
@@ -93,31 +91,105 @@
           </ul>
         </div>
       </section>
+      <section class="live-example">
+        <div class="live-example__wrapper container">
+          <div class="live-example__layout">
+            <h2 class="live-example__title">Живой пример</h2>
+            <div class="live-example__description">
+              <div class="live-example__story">
+                <p class="live-example__story-text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+              </div>
+              <div class="live-example__statistics-layout">
+                <div class="live-example__statistics-container">
+                  <div class="live-example__statistics-wrapper">
+                    <div class="live-example__statistics">
+                      <strong class="live-example__statistics-value">5 кг</strong>
+                      <p class="live-example__statistics-field">снижение веса</p>
+                    </div>
+                  </div>
+                  <div class="live-example__statistics-wrapper">
+                    <div class="live-example__statistics">
+                      <strong class="live-example__statistics-value">60 дней</strong>
+                      <p class="live-example__statistics-field">затрачено времени</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="live-example__price-container">
+                  <p class="live-example__price"><span class="live-example__price-text">Затраты на питание:</span><span class="live-example__price-number">&nbsp;15 000 руб.</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="live-example__toggle-container toggle">
+            <input class="toggle__input toggle__input--before visually-hidden" type="radio" id="live-example-before" name="toggle">
+            <input class="toggle__input toggle__input--after visually-hidden" type="radio" id="live-example-after" name="toggle">
+            <div class="toggle__items">
+              <div class="toggle__item toggle__item--before">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
+                  <img class="toggle__item-image toggle__item-image--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Большой кот">
+                </picture>
+              </div>
+              <div class="toggle__item toggle__item--after">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
+                  <img class="toggle__item-image toggle__item-image--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Большой кот">
+                </picture>
+              </div>
+            </div>
+            <div class="toggle__scale-container">
+              <label class="toggle__label toggle__label--before" for="live-example-before">Было</label>
+              <div class="toggle__scale-wrapper">
+                <div class="toggle__scale">
+                  <div class="toggle__scale-range toggle__scale-range--left"></div>
+                  <div class="toggle__scale-range toggle__scale-range--right"></div>
+                </div>
+              </div>
+              <label class="toggle__label toggle__label--after" for="live-example-after">Стало</label>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__links">
-        <div class="page-footer__logo-wrapper">
-          <a class="page-footer__logo-link">
-            <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
-          </a>
+      <section class="page-footer__cooperation cooperation">
+        <div class="cooperation__wrapper container">
+          <div class="cooperation__tagline">
+            <p class="cooperation__tagline-text">приглашаем к сотрудничеству дилеров!</p>
+          </div>
+          <div class="cooperation__adress">
+            <p class="cooperation__adress-text">ул. Большая Конюшенная, д. 19/8 <span class="cooperation__adress-city">Санкт-Петербург</span></p>
+          </div>
         </div>
-        <div class="page-footer__social-container social-links">
-          <ul class="social-links__list">
-            <li class="social-links__item">
-              <a class="social-links__item-link" href="#" aria-label="«Cat Energy» во вКонтакте"><img src="img/icon-vk.svg" width="22" height="12" alt="вКонтакте"></a>
-            </li>
-            <li class="social-links__item">
-              <a class="social-links__item-link" href="#" aria-label="«Cat Energy» в Инстаграм"><img src="img/icon-insta.svg" width="17" height="17" alt="Инстаграм"></a>
-            </li>
-            <li class="social-links__item">
-              <a class="social-links__item-link" href="#" aria-label="«Cat Energy» на Фейсбуке"><img src="img/icon-fb.svg" width="10" height="19" alt="Фейсбук"></a>
-            </li>
-          </ul>
+      </section>
+      <section class="page-footer__links container">
+        <div class="page-footer__links-container">
+          <div class="page-footer__logo-wrapper">
+            <a class="page-footer__logo-link">
+              <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
+            </a>
+          </div>
+          <div class="page-footer__social-container social-links">
+            <ul class="social-links__list">
+              <li class="social-links__item">
+                <a class="social-links__item-link" href="#" aria-label="«Cat Energy» во вКонтакте"><img src="img/icon-vk.svg" width="22" height="12" alt="вКонтакте"></a>
+              </li>
+              <li class="social-links__item">
+                <a class="social-links__item-link" href="#" aria-label="«Cat Energy» в Инстаграм"><img src="img/icon-insta.svg" width="17" height="17" alt="Инстаграм"></a>
+              </li>
+              <li class="social-links__item">
+                <a class="social-links__item-link" href="#" aria-label="«Cat Energy» на Фейсбуке"><img src="img/icon-fb.svg" width="10" height="19" alt="Фейсбук"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__partner-container">
+            <a class="page-footer__partner-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на HTML Academy"><span class="page-footer__partner-name">HTML Academy</span><img class="page-footer__partner-logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy"></a>
+          </div>
         </div>
-        <div class="page-footer__partner-container">
-          <a class="page-footer__partner-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на HTML Academy"><span class="page-footer__partner-name">HTML Academy</span><img class="page-footer__partner-logo" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy"></a>
-        </div>
-      </div>
+      </section>
     </footer>
+    <script src="js/toggle.js"></script>
   </body>
 </html>
