@@ -2,20 +2,27 @@
   font-family: "Arial", sans-serif;
   font-size: 12px;
   margin-bottom: 23px;
-  margin-left: 20px;
-  min-width: 150px;
   color: #444444;
+  width: 100%;
 }
 
 
 .description__value {
-  text-align: center;
+  text-align: right;
   padding-left: 64px;
 }
 
 @media (min-width: 768px) {
   .description {
+    margin: 0;
     font-size: 16px;
+    border-collapse: collapse;
+  }
+
+  .description__value,
+  .description__field {
+    border-bottom: 1px solid #d3d3d3;
+    padding: 8px 0;
   }
 }
 
