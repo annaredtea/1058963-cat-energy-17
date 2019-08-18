@@ -1,5 +1,13 @@
-.main-navigation__logo {
-  padding-left: 20px;
+.main-navigation__logo-image:hover {
+  opacity: 0.8;
+}
+
+.main-navigation__logo:active {
+  opacity: 0.6;
+}
+
+.main-navigation__wrapper {
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .main-navigation__block {
@@ -26,12 +34,24 @@
   font-weight: 500;
   line-height: 20px;
   text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 @media (min-width: 768px) {
   .main-navigation__logo {
     padding: 0;
     padding-top: 30px;
+  }
+
+  .main-navigation__wrapper {
+    border-bottom: none;
   }
 
   .main-navigation__block {
