@@ -1,22 +1,54 @@
+.programs__item-specification-block {
+  box-sizing: border-box;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #d9d9d9;
+}
+
 .programs__item-specification {
+  margin: 0;
+  padding-top: 35px;
+  padding-bottom: 20px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
-  padding-left: 21px;
-  padding-right: 36px;
   text-align: left;
   color: #444444;
 }
 
 .programs__item-following-block {
-  padding-bottom: 22px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 100px;
 }
 
 .programs__item-following-link {
+  position: relative;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
-  padding-left: 21px;
+  padding-left: 30px;
   color: #111111;
+}
+
+.programs__item-following-link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: -60px;
+  top: 50%;
+  width: 24px;
+  height: 11px;
+  background: url("../img/icon-right-arrow-long.svg") no-repeat;
+  transform: translateY(-50%);
+}
+
+.programs__item-following-link:hover::after {
+  width: 34px;
+  height: 12px;
+  background: url("../img/icon-right-arrow-verylong.svg") no-repeat;
+  transition: 0.2s;
+  background-size: 32px 11px;
 }
 
 .programs__wrapper {
@@ -60,8 +92,8 @@
 .programs__item--slim::before {
   width: 35px;
   height: 49px;
-  margin-top: 15px;
-  margin-left: 25px;
+  margin-top: 30px;
+  margin-left: 35px;
   background-image: url("../img/icon-cat-slim.svg");
   background-size: 100% auto;
 }
@@ -69,8 +101,8 @@
 .programs__item--pro::before {
   width: 67px;
   height: 28px;
-  margin-top: 30px;
-  margin-left: 10px;
+  margin-top: 42px;
+  margin-left: 20px;
   background-image: url("../img/icon-cat-pro.svg");
   background-size: 100% auto;
 }
@@ -84,8 +116,8 @@
   height: 50px;
   background-color: #68b738;
   border-radius: 50%;
-  margin-top: 22px;
-  margin-left: 22px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 @media (min-width: 768px) {
@@ -93,16 +125,19 @@
     margin: 0;
     font-size: 36px;
     padding-top: 81px;
-    padding-bottom: 26px;
+    padding-bottom: 10px;
     padding-left: 55px;
+  }
+
+  .programs__item-specification-block {
+    border: none;
   }
 
   .programs__item-specification {
     font-size: 16px;
     margin: 0;
     padding-right: 23px;
-    padding-bottom: 61px;
-    padding-left: 52px;
+    padding-left: 25px;
   }
 
   .programs__item {
@@ -152,7 +187,7 @@
     display: inline-block;
     vertical-align: top;
     padding-bottom: 62px;
-    padding-left: 53px;
+    padding-left: 60px;
   }
 
   .programs__item-following-link {

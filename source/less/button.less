@@ -12,17 +12,44 @@
   color: #ffffff;
   text-decoration: none;
   text-align: center;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--purchase {
   font-size: 16px;
-  box-sizing: border-box;
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button--additional {
+  width: 100%;
 }
 
 .button--grey {
   padding: 10px 0;
   background-color: #f2f2f2;
   color: #444444;
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 @media (min-width: 768px) {
@@ -32,6 +59,8 @@
   }
 
   .button--purchase {
+    display: inline-block;
+    width: 100%;
     margin: 0;
     text-align: center;
     padding-top: 10px;
@@ -39,7 +68,7 @@
   }
 
   .button--grey {
-    margin: 0;
+    width: 90%;
     text-align: center;
     font-size: 16px;
     padding-top: 10px;
@@ -51,6 +80,13 @@
     top: 250px;
     left: 130px;
   }
+
+  .button--additional {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: 1300px) {
@@ -61,6 +97,7 @@
 
   .button--purchase {
     padding: 13px 53px 12px 55px;
+    width: 45%;
   }
 
   .button--grey {
