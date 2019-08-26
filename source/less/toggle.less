@@ -114,6 +114,7 @@
   }
 
   .toggle__label {
+    z-index: 2;
     font-size: 20px;
     line-height: 20px;
     padding-bottom: 5px;
@@ -163,6 +164,46 @@
     width: 8px;
     height: 8px;
     transform: translate(-50%, -50%);
+  }
+
+  .toggle {
+    width: 690px;
+    margin: 0 auto;
+  }
+
+  .toggle__item--before {
+    position: absolute;
+    z-index: 2;
+    max-width: 49%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #ffffff, #ffffff 180px, #f2f2f2 170px, #f2f2f2);
+  }
+
+  .toggle__item--after {
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .toggle__item-image {
+    margin: 0;
+    max-width: inherit;
+  }
+
+  .toggle__input--after:checked ~ .toggle__items .toggle__item--before,
+  .toggle__input--before ~ .toggle__items .toggle__item--after {
+    display: block;
+  }
+
+  .toggle__input--after:checked ~ .toggle__scale-container .toggle__scale-range--right,
+  .toggle__input--before:checked ~ .toggle__scale-container .toggle__scale-range--left {
+    display: none;
+  }
+
+  .toggle__scale-container {
+    padding-bottom: 70px;
   }
 }
 

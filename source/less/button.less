@@ -36,6 +36,7 @@
 
 .button--grey {
   padding: 10px 0;
+  font-size: 16px;
   background-color: #f2f2f2;
   color: #444444;
   display: block;
@@ -50,6 +51,10 @@
   &:active {
     color: rgba(68, 68, 68, 0.3);
   }
+}
+
+.button--submit {
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
@@ -68,10 +73,11 @@
   }
 
   .button--grey {
+    padding: 13px 0;
     width: 90%;
     text-align: center;
     font-size: 16px;
-    padding-top: 10px;
+    margin-top: 15px;
   }
 
   .button--introduction {
@@ -86,6 +92,10 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .button--submit {
+    width: 30%;
   }
 }
 
@@ -106,5 +116,16 @@
 
   .button--introduction {
     max-width: 20%;
+  }
+
+  .button--submit {
+    width: 568px;
+  }
+
+  .button--additional {
+    padding: 0;
+    width: 245px;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 }

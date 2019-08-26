@@ -1,3 +1,7 @@
+.main-navigation__logo {
+  padding-left: 20px;
+}
+
 .main-navigation__logo-image:hover {
   opacity: 0.8;
 }
@@ -7,6 +11,7 @@
 }
 
 .main-navigation__wrapper {
+  padding: 0;
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -16,24 +21,72 @@
   align-items: center;
   flex-wrap: wrap;
   padding-top: 11px;
-  padding-bottom: 15px;
+}
+
+.main-navigation__toggle {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  font-size: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 19px;
+    background-image: url("../img/icon-mobile-menu.svg");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 19px;
+    background-image: url("../img/icon-close.svg");
+    background-repeat: no-repeat;
+    display: none;
+  }
+}
+
+.main-navigation__toggle:focus {
+  outline: none;
 }
 
 .main-navigation__list {
+  width: 100%;
+  text-align: center;
+  padding: 0;
   display: none;
+}
+
+.main-navigation__list--open {
+  display: block;
 }
 
 .main-navigation__item {
   list-style: none;
+  padding-bottom: 25px;
+
+  &:nth-child(3n) {
+    padding-bottom: 5px;
+  }
 }
 
 .main-navigation__link {
+  display: block;
   text-decoration: none;
   color: #111111;
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
   text-transform: uppercase;
+  border-top: 1px solid #e6e6e6;
+  width: 100%;
+  padding-top: 25px;
 
   &:hover {
     opacity: 0.8;
@@ -52,6 +105,7 @@
 
   .main-navigation__wrapper {
     border-bottom: none;
+    padding: 0 30px;
   }
 
   .main-navigation__block {
@@ -61,6 +115,7 @@
   }
 
   .main-navigation__list {
+    width: inherit;
     display: flex;
     margin: 0;
     padding-top: 30px;
@@ -78,6 +133,12 @@
     font-weight: 400;
     font-style: normal;
     line-height: 25px;
+    padding-bottom: 10px;
+    border-top: none;
+  }
+
+  .main-navigation__link--active {
+    border-bottom: 2px solid #68b738;
   }
 
   .main-navigation__toggle {
@@ -108,5 +169,13 @@
 
   .main-navigation__link {
     font-size: 20px;
+  }
+
+  .main-navigation__link--active {
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .main-navigation__link--green {
+    border-bottom: 2px solid #68b738;
   }
 }

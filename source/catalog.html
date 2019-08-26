@@ -50,13 +50,15 @@
               <img class="main-navigation__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Cat Energy">
             </picture>
           </a>
-          <button class="main-navigation__toggle" type="button">Открыть меню</button>
+          <div class="main-navigation__toggle-container">
+            <button class="main-navigation__toggle" type="button">Открыть меню</button>
+          </div>
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="index.html">Главная</a>
             </li>
-            <li class="main-navigation__item main-navigation__item--active">
-              <a class="main-navigation__link" href="#">Каталог продукции</a>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link main-navigation__link--active main-navigation__link--green" href="#">Каталог продукции</a>
             </li>
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="form.html">Подбор программы</a>
@@ -342,7 +344,7 @@
         <div class="additional__wrapper">
           <div class="additional__items-container">
             <div class="additional__item">
-              <div class="additional__item-lauout">
+              <div class="additional__item-layout">
                 <h3 class="additional__item-title">Сахарозаменитель</h3>
                 <table class="additional__item-description">
                   <tr class="additional__item-volume">
@@ -356,7 +358,7 @@
               </div>
             </div>
             <div class="additional__item">
-              <div class="additional__item-lauout">
+              <div class="additional__item-layout">
                 <h3 class="additional__item-title">Питевая вода</h3>
                 <table class="additional__item-description">
                   <tr class="additional__item-volume">
@@ -370,7 +372,7 @@
               </div>
             </div>
             <div class="additional__item">
-              <div class="additional__item-lauout">
+              <div class="additional__item-layout">
                 <h3 class="additional__item-title">Молоко</h3>
                 <table class="additional__item-description">
                   <tr class="additional__item-volume">
@@ -384,7 +386,7 @@
               </div>
             </div>
             <div class="additional__item">
-              <div class="additional__item-lauout">
+              <div class="additional__item-layout">
                 <h3 class="additional__item-title">Витамины</h3>
                 <table class="additional__item-description">
                   <tr class="additional__item-volume">
@@ -400,8 +402,10 @@
           </div>
           <div class="additional__offer-wrapper">
             <div class="additional__offer">
-              <svg class="additional__offer-image" width="56" height="61"><use xlink:href="#offer-image"></use></svg>
-              <p class="additional__offer-text">Закажите все и получите чехол для кота в подарок!</p>
+              <div class="additional__offer-layout">
+                <svg class="additional__offer-image" width="56" height="61"><use xlink:href="#offer-image"></use></svg>
+                <p class="additional__offer-text">Закажите все и получите чехол для кота в подарок!</p>
+              </div>
             </div>
           </div>
         </div>
@@ -409,14 +413,30 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__cooperation cooperation">
-        <div class="cooperation__wrapper container">
-          <div class="cooperation__tagline">
-            <p class="cooperation__tagline-text">приглашаем к сотрудничеству дилеров!</p>
-          </div>
-          <div class="cooperation__adress">
-            <p class="cooperation__adress-text">ул. Большая Конюшенная, д. 19/8 <span class="cooperation__adress-city">Санкт-Петербург</span></p>
+        <div class="cooperation__layout container">
+          <div class="cooperation__wrapper cooperation__wrapper--white">
+            <div class="cooperation__tagline">
+              <p class="cooperation__tagline-text">приглашаем к сотрудничеству дилеров!</p>
+            </div>
+            <div class="cooperation__adress">
+              <p class="cooperation__adress-text">ул. Большая Конюшенная, д. 19/8 <span class="cooperation__adress-city">Санкт-Петербург</span></p>
+            </div>
           </div>
         </div>
+        <section class="cooperation__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" height="400" allowfullscreen=""></iframe>
+          <div class="cooperation__map-container">
+            <h2 class="visually-hidden">Карта</h2>
+            <picture>
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
+              <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+              <img class="cooperation__map-image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            </picture>
+          </div>
+        </section>
       </div>
       <div class="page-footer__links container">
         <div class="page-footer__links-container">
@@ -444,5 +464,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/navigation-open-close.js"></script>
   </body>
 </html>
