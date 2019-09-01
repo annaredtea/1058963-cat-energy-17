@@ -18,18 +18,55 @@
   font-size: 16px;
 }
 
+.additional__title-layout {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #68b738;
+    width: 100%;
+    left: 0;
+    top: 63%;
+    transform: translate(0, -50%);
+    z-index: 1;
+  }
+}
+
 .additional__title {
-  margin: 0;
+  margin-top: 0;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
-  padding-bottom: 20px;
+}
+
+.additional__title-layout span {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  padding-right: 24px;
+
+  &::before {
+    content: "";
+    width: 24px;
+    height: 100%;
+    position: absolute;
+    left: -24px;
+    background-color: #ffffff;
+  }
+}
+
+.additional__wrapper {
+  margin-top: 35px;
 }
 
 .additional__item-description {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   width: 100%;
+  margin-bottom: 12px;
 }
 
 .additional__item-price {
@@ -59,8 +96,9 @@
 
 .additional__offer-image {
   fill: #ffffff;
-  padding-top: 65px;
+  padding-top: 75px;
   padding-bottom: 65px;
+  padding-left: 48px;
 }
 
 .additional__offer-text {
@@ -76,30 +114,52 @@
 
 @media (min-width: 768px) {
   .additional__title {
-    margin-top: 70px;
+    margin-top: 50px;
     font-size: 36px;
     line-height: 36px;
   }
 
+  .additional__title-layout span {
+    padding-right: 38px;
+    padding-left: 38px;
+
+    &::before {
+      width: 38px;
+      display: none;
+    }
+  }
+
+  .additional__wrapper {
+    margin-top: 75px;
+  }
+
   .additional__item-title {
+    padding-top: 30px;
     font-size: 20px;
-    flex: 0 0 50%;
+    flex: 0 0 55%;
   }
 
   .additional__item-description {
-    padding-top: 10px;
+    padding-top: 30px;
     font-size: 16px;
-    width: 100%;
+    flex: 0 0 45%;
+  }
+
+  .additional__offer-layout {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    justify-content: space-between;
   }
 
   .additional__offer {
-    flex-direction: row;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
   }
 
   .additional__offer-text {
     text-align: left;
     padding: 0;
+    padding-top: 75px;
     padding-right: 15%;
   }
 
@@ -115,7 +175,9 @@
 
   .additional__item-layout {
     display: flex;
-    padding: 0 35px;
+    padding-left: 40px;
+    padding-right: 30px;
+    padding-bottom: 10px;
   }
 
   .additional__item-value {
@@ -125,6 +187,14 @@
 
   .additional__item-price {
     width: 50%;
+  }
+
+  .additional__item {
+    margin-top: 27px;
+  }
+
+  .additional__offer-wrapper {
+    margin-top: 70px;
   }
 }
 
@@ -139,8 +209,17 @@
     flex-direction: row;
   }
 
+  .additional__title-layout span {
+    padding-left: 0;
+
+    &::before {
+      display: block;
+      width: 38px;
+      left: -38px;
+    }
+  }
+
   .additional__title {
-    padding: 0;
     margin-bottom: 60px;
   }
 
@@ -177,6 +256,8 @@
 
   .additional__offer-layout {
     padding-left: 40px;
+    width: inherit;
+    flex-direction: column;
   }
 
   .additional__offer {
@@ -188,16 +269,18 @@
   .additional__offer-text {
     text-align: center;
     padding-bottom: 40px;
+    padding-left: 20px;
+    padding-top: 0;
   }
 
   .additional__offer-image {
-    padding-left: 50px;
+    padding-left: 70px;
     padding-bottom: 60px;
   }
 
   .additional__item-title {
-    padding-top: 22px;
-    padding-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   .additional__item-description {

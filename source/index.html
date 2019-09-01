@@ -32,17 +32,19 @@
   </svg>
 
     <header class="page-header page-header__preview">
-      <div class="main-navigation main-navigation__wrapper container">
+      <div class="main-navigation main-navigation__wrapper">
         <nav class="main-navigation__block">
-          <a class="main-navigation__logo" href="#">
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="main-navigation__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Cat Energy">
-            </picture>
-          </a>
-          <div class="main-navigation__toggle-container">
-            <button class="main-navigation__toggle" type="button">Открыть меню</button>
+          <div class="main-navigation__layout">
+            <a class="main-navigation__logo" href="#">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="main-navigation__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Cat Energy">
+              </picture>
+            </a>
+            <div class="main-navigation__toggle-container">
+              <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+            </div>
           </div>
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
@@ -92,12 +94,12 @@
               </div>
             </div>
             <div class="programs__item programs__item--pro">
-              <div class="programs__description">
-                <h3 class="programs__item-title">Набор массы</h3>
-                <div class="programs__item-specification-block">
-                  <p class="programs__item-specification">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+              <div class="programs__description programs__description--pro">
+                <h3 class="programs__item-title programs__item-title--pro">Набор массы</h3>
+                <div class="programs__item-specification-block programs__item-specification-block--pro">
+                  <p class="programs__item-specification programs__item-specification--pro">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
                 </div>
-                <div class="programs__item-following-block">
+                <div class="programs__item-following-block programs__item-following-block--pro">
                   <a class="programs__item-following-link" href="#">Каталог Pro</a>
                 </div>
               </div>
@@ -134,10 +136,10 @@
               </div>
               <div class="live-example__statistics-layout">
                 <div class="live-example__statistics-container">
-                  <div class="live-example__statistics-wrapper">
+                  <div class="live-example__statistics-wrapper live-example__statistics-wrapper--weight">
                     <div class="live-example__statistics">
                       <strong class="live-example__statistics-value">5 кг</strong>
-                      <p class="live-example__statistics-field">снижение веса</p>
+                      <p class="live-example__statistics-field live-example__statistics-field--weight">снижение веса</p>
                     </div>
                   </div>
                   <div class="live-example__statistics-wrapper">
@@ -198,7 +200,7 @@
     <footer class="page-footer">
       <div class="page-footer__cooperation cooperation">
         <div class="cooperation__layout container">
-          <div class="cooperation__wrapper cooperation__wrapper--white">
+          <div class="cooperation__wrapper cooperation__wrapper--white-1">
             <div class="cooperation__tagline">
               <p class="cooperation__tagline-text">приглашаем к сотрудничеству дилеров!</p>
             </div>

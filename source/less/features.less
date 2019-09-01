@@ -1,4 +1,6 @@
 .features__title {
+  margin-top: 21px;
+  margin-bottom: 26px;
   font-size: 36px;
   line-height: 60px;
   text-align: left;
@@ -10,7 +12,7 @@
   display: flex;
   align-items: center;
   font-family: "Arial", sans-serif;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   font-size: 14px;
   list-style: none;
 
@@ -53,6 +55,7 @@
   font-family: "Arial", sans-serif;
   color: #444444;
   font-size: 14px;
+  line-height: 18px;
   margin: 0;
 }
 
@@ -64,8 +67,8 @@
   .features__title {
     margin: 0;
     padding: 0;
-    margin-top: 51px;
-    margin-bottom: 63px;
+    margin-top: 45px;
+    margin-bottom: 73px;
     font-size: 60px;
   }
 
@@ -79,16 +82,22 @@
     margin: 0;
     padding: 0;
     display: block;
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 45%;
+    max-width: 45%;
     align-items: center;
-    margin-bottom: 87px;
+    margin-bottom: 82px;
     counter-increment: number;
     max-height: 235px;
-  }
 
-  .features__item:nth-child(2n) {
-    margin-right: 0;
+    &:nth-child(2n) {
+      margin-left: 9%;
+      margin-right: 0;
+    }
+
+    &:nth-child(3n),
+    &:nth-child(4n) {
+      margin-bottom: 15px;
+    }
   }
 
   .features__item-description {
@@ -139,14 +148,11 @@
     margin: 0;
     max-width: 250px;
     margin-right: 70px;
-  }
 
-  .features__item:nth-child(2n) {
-    margin-right: 105px;
-  }
-
-  .features__item:nth-child(4n) {
-    margin-right: 0;
+    &:nth-child(2n) {
+      margin-left: inherit;
+      margin-right: 105px;
+    }
   }
 
   .features__item::after {

@@ -34,17 +34,19 @@
   </svg>
 
     <header class="page-header">
-      <div class="main-navigation main-navigation__wrapper container">
+      <div class="main-navigation main-navigation__wrapper main-navigation__wrapper--border">
         <nav class="main-navigation__block">
-          <a class="main-navigation__logo" href="index.html">
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="main-navigation__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Cat Energy">
-            </picture>
-          </a>
-          <div class="main-navigation__toggle-container">
-            <button class="main-navigation__toggle" type="button">Открыть меню</button>
+          <div class="main-navigation__layout">
+            <a class="main-navigation__logo" href="index.html">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="main-navigation__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Cat Energy">
+              </picture>
+            </a>
+            <div class="main-navigation__toggle-container">
+              <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+            </div>
           </div>
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
@@ -70,34 +72,34 @@
           <div class="choice__columns-container">
             <div class="choice__columns">
               <div class="choice__column choice__column--profile container container-2">
-                <fieldset class="choice__column-data">
+                <fieldset class="choice__column-data choice__column-data--info">
                   <h2 class="visually-hidden">Анкета для кота</h2>
                   <label class="choice__column-area">
                     <span class="choice__column-text">Имя:*</span>
-                    <input class="choice__column-field" type="text" placeholder="Барсик" required>
+                    <input class="choice__column-field choice__column-field--info" type="text" placeholder="Барсик" required>
                   </label>
                   <label class="choice__column-area">
                     <span class="choice__column-text">Вес (кг):*</span>
-                    <input class="choice__column-field" type="text" placeholder="7" required>
+                    <input class="choice__column-field choice__column-field--info" type="text" placeholder="7" required>
                   </label>
                   <label class="choice__column-area">
                     <span class="choice__column-text">Возраст (лет):</span>
-                    <input class="choice__column-field" type="text" placeholder="7">
+                    <input class="choice__column-field choice__column-field--info" type="text" placeholder="7">
                   </label>
                 </fieldset>
               </div>
-              <div class="choice__column choice__column--diets">
-                <fieldset class="choice__column-data container">
+              <div class="choice__column choice__column--diets container container-2">
+                <fieldset class="choice__column-data choice__column-data--radio">
                   <ul class="choice__column-filter">
-                    <li class="choice__column-item">
+                    <li class="choice__column-item choice__column-item--radio">
                       <input class="choice__column-radio" type="radio" id="radio-1" name="choice" checked>
                       <label class="choice__column-form" for="radio-1">Похудение</label>
                     </li>
-                    <li class="choice__column-item">
+                    <li class="choice__column-item choice__column-item--radio">
                       <input class="choice__column-radio" type="radio" id="radio-2" name="choice">
                       <label class="choice__column-form" for="radio-2">Набор массы</label>
                     </li>
-                    <li class="choice__column-item">
+                    <li class="choice__column-item choice__column-item--radio">
                       <input class="choice__column-radio" type="radio" id="radio-3" name="choice">
                       <label class="choice__column-form" for="radio-3">Не знаю (Нужен ваш совет)</label>
                     </li>
@@ -105,48 +107,58 @@
                 </fieldset>
               </div>
             </div>
-            <div class="choice__column choice__column--contacts container container-2">
+            <div class="choice__column choice__column--contacts">
               <fieldset class="choice__column-data choice__column-data--contacts">
-                <h2 class="choice__column-title choice__column-title--contacts">Контактные данные (владельца кота)</h2>
-                <div class="choice__columns-layout">
+                <div class="choice__column-title-layout choice__column-title-layout--contacts">
+                  <h2 class="choice__column-title choice__column-title--contacts container container-2"><span>Контактные данные (владельца кота)</span></h2>
+                </div>
+                <div class="choice__columns-layout container container-2">
                   <label class="choice__column-area choice__column-area--email">
                     <span class="choice__column-text">E-mail:*</span>
-                    <input class="choice__column-field" type="text" placeholder="kuklachev@gmail.com" required>
+                    <input class="choice__column-field choice__column-field--email" type="text" placeholder="kuklachev@gmail.com" required>
                     <svg class="choice__column-image choice__column-image--email" width="18" height="14"><use xlink:href="#column-email"></use></svg>
                   </label>
                   <label class="choice__column-area choice__column-area--phone">
                     <span class="choice__column-text">Телефон:*</span>
-                    <input class="choice__column-field" type="text" placeholder="8 (960) 900-60-90" required>
+                    <input class="choice__column-field choice__column-field--phone" type="text" placeholder="8 (960) 900-60-90" required>
                     <svg class="choice__column-image choice__column-image--phone" width="21" height="21"><use xlink:href="#column-phone"></use></svg>
                   </label>
                 </div>
               </fieldset>
             </div>
-            <div class="choice__column choice__column--comment container container-2">
-              <h2 class="choice__column-title">Комментарий</h2>
-              <label class="choice__column-story" for="column-textarea"></label>
-              <textarea class="choice__column-field" rows="7" id="column-textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="choice__column choice__column--comment">
+              <div class="choice__column-title-layout choice__column-title-layout--comment">
+                <h2 class="choice__column-title choice__column-title--comment container container-2"><span>Комментарий</span></h2>
+              </div>
+              <div class="choice__column-storu-layout container container-2">
+                <label class="choice__column-story" for="column-textarea"></label>
+                <textarea class="choice__column-field choice__column-field--story container" rows="5" id="column-textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </div>
             </div>
-            <div class="choice__column choice__column--additionally container container-2">
-              <h2 class="choice__column-title">Дополнительно</h2>
-              <ul class="choice__column-checks">
-                <li class="choice__column-item choice__column-item--checkbox">
-                  <input class="choice__column-checkbox" type="checkbox" id="check-1" checked>
-                  <label class="choice__column-form choice__column-form--checkbox" for="check-1">Сахарозаменитель</label>
-                </li>
-                <li class="choice__column-item choice__column-item--checkbox">
-                  <input class="choice__column-checkbox" type="checkbox" id="check-2">
-                  <label class="choice__column-form choice__column-form--checkbox" for="check-2">Питьевая вода</label>
-                </li>
-                <li class="choice__column-item choice__column-item--checkbox">
-                  <input class="choice__column-checkbox" type="checkbox" id="check-3">
-                  <label class="choice__column-form choice__column-form--checkbox" for="check-3">Молоко</label>
-                </li>
-                <li class="choice__column-item choice__column-item--checkbox">
-                  <input class="choice__column-checkbox" type="checkbox" id="check-4">
-                  <label class="choice__column-form choice__column-form--checkbox" for="check-4">Витамины</label>
-                </li>
-              </ul>
+            <div class="choice__column choice__column--additionally">
+              <div class="choice__column-title-layout choice__column-title-layout--additionally">
+                <h2 class="choice__column-title choice__column-title--additionally container container-2"><span>Дополнительно</span></h2>
+              </div>
+              <div class="choice__column-checks-layout container container-2">
+                <ul class="choice__column-checks">
+                  <li class="choice__column-item choice__column-item--checkbox">
+                    <input class="choice__column-checkbox" type="checkbox" id="check-1" checked>
+                    <label class="choice__column-form choice__column-form--checkbox" for="check-1">Сахарозаменитель</label>
+                  </li>
+                  <li class="choice__column-item choice__column-item--checkbox">
+                    <input class="choice__column-checkbox" type="checkbox" id="check-2">
+                    <label class="choice__column-form choice__column-form--checkbox" for="check-2">Питьевая вода</label>
+                  </li>
+                  <li class="choice__column-item choice__column-item--checkbox">
+                    <input class="choice__column-checkbox" type="checkbox" id="check-3">
+                    <label class="choice__column-form choice__column-form--checkbox" for="check-3">Молоко</label>
+                  </li>
+                  <li class="choice__column-item choice__column-item--checkbox">
+                    <input class="choice__column-checkbox" type="checkbox" id="check-4">
+                    <label class="choice__column-form choice__column-form--checkbox" for="check-4">Витамины</label>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="choice__column choice__column--submit container container-2">
               <button class="button button--submit" type="submit">Отправить заявку</button>
@@ -159,9 +171,9 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__cooperation cooperation">
-        <div class="cooperation__layout container">
-          <div class="cooperation__wrapper cooperation__wrapper--white">
+      <div class="page-footer__cooperation cooperation cooperation__wrapper--grey">
+        <div class="cooperation__layout container container-2">
+          <div class="cooperation__wrapper">
             <div class="cooperation__tagline">
               <p class="cooperation__tagline-text">приглашаем к сотрудничеству дилеров!</p>
             </div>
