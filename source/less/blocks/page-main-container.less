@@ -1,0 +1,144 @@
+.page-main-container {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.page-main-container__program-select,
+.page-main-container__catalog-sections,
+.page-main-container__features,
+.page-main-container__live-example {
+  width: 100%;
+}
+
+.page-main-container__title {
+  margin: 0 auto;
+  padding: 15px 20px 0 20px;
+  box-sizing: border-box;
+
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1.67;
+  color: #111111;
+
+  &--form {
+    margin-bottom: 26px;
+  }
+}
+
+.page-main-container__product-catalog {
+  width: auto;
+
+  margin: 0 0 35px 0;
+}
+
+.page-main-container__live-example {
+  position: relative;
+
+  background-color: #f2f2f2;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main-container {
+    &--catalog {
+      padding: 58px 0 0 0;
+    }
+
+    &--form {
+      padding: 58px 0 0 0;
+    }
+  }
+
+  .page-main-container__program-sections {
+    margin: 0 auto 17px auto;
+  }
+
+  .page-main-container__title {
+    padding: 0 30px 0 30px;
+
+    font-size: 60px;
+    line-height: 1;
+
+    &--form {
+      padding: 0 30px 0 29px;
+      margin-bottom: 55px;
+    }
+  }
+
+  .page-main-container__features {
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .page-main-container__product-catalog {
+    margin: 0 0 76px 0;
+  }
+
+  .page-main-container__live-example {
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main-container {
+    position: relative;
+
+    &--form {
+      padding: 74px 0 0 0;
+    }
+
+    &--catalog {
+      padding: 74px 0 0 0;
+    }
+  }
+
+  .page-main-container__background-index {
+    position: relative;
+
+    &::after {
+      display: block;
+      position: absolute;
+      top: -114px;
+      right: 0;
+      z-index: -10;
+
+      width: 50%;
+      height: 696px;
+
+      background-image: url("../img/index-background-desktop@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
+
+      background-size: cover;
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-color: #6bae42;
+
+      content: "";
+    }
+  }
+
+  .page-main-container__title {
+    padding: 0 40px 0 40px;
+  }
+
+  .page-main-container__features {
+    border-bottom: none;
+  }
+
+  .page-main-container__live-example {
+    background-image: linear-gradient(to right, #f2f2f2 71.786%, #eaeaea 71.786%);
+    background-repeat: no-repeat;
+    background-size: 100% 462px;
+    background-position: bottom;
+  }
+
+  .page-main-container__program-sections {
+    margin: 0 auto 74px auto;
+  }
+
+  .page-main-container__product-catalog {
+    margin: 0 0 86px 0;
+  }
+}
