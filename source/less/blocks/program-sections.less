@@ -1,0 +1,261 @@
+.program-sections__list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 20px 20px 0 20px;
+
+  list-style: none;
+}
+
+.program-sections__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  margin: 0 0 19px 0;
+  padding: 32px 20px 0 20px;
+  background-color: #f2f2f2;
+
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 26px;
+    left: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: #68b738;
+
+    border-radius: 50%;
+
+    content: "";
+  }
+
+  &--slim::after {
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 30px;
+
+    width: 35.4px;
+    height: 49px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+    background-size: 35.4px 49px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    content: "";
+  }
+
+  &--pro::after {
+    display: block;
+    position: absolute;
+    top: 37px;
+    left: 13px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+    background-size: 67px 28px;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    content: "";
+  }
+}
+
+.program-sections__title {
+  margin: 0 0 30px 0;
+  padding: 0 0 0 71px;
+
+  font-size: 24px;
+  line-height: 1.54;
+  font-weight: normal;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.program-sections__description {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 22px 0;
+
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #444444;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.program-sections__break {
+  &--tablet {
+    display: none;
+  }
+}
+
+.program-sections__button {
+  display: block;
+  position: relative;
+  align-self: flex-start;
+
+  padding: 20px 0 20px 0;
+
+  font-size: 16px;
+  line-height: 1;
+  color: #111111;
+  text-align: left;
+}
+
+@media (min-width: @tablet-width) {
+  .program-sections__list {
+    box-sizing: border-box;
+    padding: 0 30px 0 30px;
+  }
+
+  .program-sections__item {
+    align-items: flex-start;
+
+    margin: 0 0 30px 0;
+    padding: 76px 50px 40px 50px;
+
+    &::before {
+      top: 91px;
+      left: auto;
+      right: 61px;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim::after {
+      top: 80px;
+      left: auto;
+      right: 92px;
+
+      width: 141px;
+      height: 194px;
+
+      background-size: 141px 194px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &--pro::after {
+      top: 134px;
+      left: auto;
+      right: 28px;
+
+      width: 268px;
+      height: 113px;
+
+      background-size: 268px 113px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .program-sections__title {
+    margin: 0 0 26px 3px;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 1.03;
+  }
+
+  .program-sections__description {
+    margin: 0 0 36px 2px;
+    padding: 0 233px 0 0;
+    box-sizing: border-box;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    border: none;
+  }
+
+  .program-sections__break {
+    &--tablet {
+      display: inline;
+    }
+  }
+
+  .program-sections__button {
+    margin: 0 0 0 2px;
+
+    font-size: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-sections__list {
+    flex-direction: row;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    padding: 0 40px 0 40px;
+  }
+
+  .program-sections__item {
+    width: 46.722%;
+    margin: 0;
+    padding: 76px 54px 40px 51px;
+    box-sizing: border-box;
+
+    &::before {
+      top: 47px;
+      left: 52px;
+      right: auto;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim::after {
+      top: 41px;
+      left: 66px;
+      right: auto;
+
+      width: 71px;
+      height: 97px;
+
+      background-size: 71px 97px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &--pro::after {
+      top: 69px;
+      left: 34px;
+      right: auto;
+
+      width: 134px;
+      height: 57px;
+
+      background-size: 134px 57px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .program-sections__title {
+    margin: 0 0 74px 163px;
+  }
+
+  .program-sections__description {
+    margin: 0 0 12px 1px;
+    padding: 0;
+  }
+
+  .program-sections__break {
+    &--tablet {
+      display: none;
+    }
+  }
+}
